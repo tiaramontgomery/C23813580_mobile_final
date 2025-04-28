@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false, 
       home: MyHomePage(title: "Cookbook+"), 
     );
   }
@@ -105,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: 
                 TextButton(
                 style: TextButton.styleFrom(
-                backgroundColor: selectedCategory == 'Beef' ? Colors.red[700] : Colors.red, 
+                backgroundColor: selectedCategory == 'Beef' ? const Color.fromARGB(255, 171, 36, 36) : Colors.red, 
                 textStyle: const TextStyle(fontSize: 15), shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
                 ),), 

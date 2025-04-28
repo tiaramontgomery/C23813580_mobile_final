@@ -59,7 +59,7 @@ class _RecipeState extends State<Recipe> {
    Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(widget.title, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.red) ),
       ),
       body: recipeDetails == null
           ? const Center(child: CircularProgressIndicator())
@@ -71,8 +71,6 @@ class _RecipeState extends State<Recipe> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Center(
-                      // child: 
-                      // Image.network(recipeDetails!['strMealThumb'], width: 300,),
                       child: Expanded(
                       flex: 7,
                       child: ClipRRect(
@@ -87,12 +85,12 @@ class _RecipeState extends State<Recipe> {
                       
                     ),
                     const SizedBox(height: 16),
-                    Center(
-                      child: Text(
-                      recipeDetails!['strMeal'],
-                      style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.red),
-                    ),
-                    ),
+                    // Center(
+                    //   child: Text(
+                    //   recipeDetails!['strMeal'],
+                    //   style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.red),
+                    // ),
+                    // ),
                     
                     const SizedBox(height: 24),
                     const Text(

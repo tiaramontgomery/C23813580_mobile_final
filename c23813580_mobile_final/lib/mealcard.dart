@@ -49,6 +49,7 @@ class _MealcardState extends State<Mealcard> {
             curve: Curves.easeInOut,
             padding: const EdgeInsets.all(12),
             child: Card(
+              color: const Color.fromARGB(255, 253, 142, 134),
               elevation: _isHovered ? 10 : 4,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
@@ -56,6 +57,9 @@ class _MealcardState extends State<Mealcard> {
               child: Container(
                 width: 1500,
                 height: 250,
+            
+
+                
                 padding: const EdgeInsets.all(8),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -79,6 +83,7 @@ class _MealcardState extends State<Mealcard> {
                         child: Text(
                           widget.title,
                           style: const TextStyle(
+                            color: Colors.white,
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
@@ -96,68 +101,3 @@ class _MealcardState extends State<Mealcard> {
     );
   }
 }
-//   Widget build(BuildContext context) {
-//     return Column(
-//       children: [  
-//       MouseRegion(
-//           onEnter: (_) {
-//             setState(() {
-//               _isHovered = true;
-//             });
-//           },
-//           onExit: (_) {
-//             setState(() {
-//               _isHovered = false;
-//             });
-//           },
-//           child: GestureDetector(
-//             onTap: () {
-//               Navigator.push(
-//                 context,
-//                 MaterialPageRoute(
-//                   builder: (context) => Recipe(widget.title),
-//                 ),
-//               );
-//             },
-//             child: AnimatedContainer(
-//               duration: const Duration(milliseconds: 200),
-//               decoration: BoxDecoration(
-//                 border: Border.all(
-//                   color: _isHovered ? Colors.blue : Colors.black,
-//                   width: 3.0,
-//                 ),
-//                 boxShadow: _isHovered
-//                     ? [
-//                         BoxShadow(
-//                           color: Colors.blue.withOpacity(0.5),
-//                           blurRadius: 10,
-//                           spreadRadius: 2,
-//                         )
-//                       ]
-//                     : [],
-//               ),
-//                child: Transform.scale(
-//                 scale: _isHovered ? 1.05 : 1.0,
-//               child: Image.network(
-//                 widget.img,
-//                 width: 300,
-//                 fit: BoxFit.cover,
-//               ),
-//                ),
-//             ),
-//           ),
-//         ),
-//       Padding(padding:  EdgeInsets.all(16),
-//       child:
-
-//       Text (widget.title, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,)),),
-     
-      
-      
-//       ],
-
-      
-
-//     );
-//   }
-// }
