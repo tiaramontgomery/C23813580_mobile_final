@@ -103,3 +103,19 @@ class _RecipeState extends State<Recipe> {
                     ...buildIngredients(), 
                     const SizedBox(height: 24),
                     const Text(
+                      'Instructions:',
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.red),
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      recipeDetails!['strInstructions'],
+                      style: const TextStyle(fontSize: 16),
+                ),
+              ],
+            ),
+          ),
+       ),
+    );
+  }
+}
+ 

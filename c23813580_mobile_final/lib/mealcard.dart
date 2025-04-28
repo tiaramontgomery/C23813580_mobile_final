@@ -77,4 +77,87 @@ class _MealcardState extends State<Mealcard> {
                       flex: 3,
                       child: Center(
                         child: Text(
-                          wid
+                          widget.title,
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+//   Widget build(BuildContext context) {
+//     return Column(
+//       children: [  
+//       MouseRegion(
+//           onEnter: (_) {
+//             setState(() {
+//               _isHovered = true;
+//             });
+//           },
+//           onExit: (_) {
+//             setState(() {
+//               _isHovered = false;
+//             });
+//           },
+//           child: GestureDetector(
+//             onTap: () {
+//               Navigator.push(
+//                 context,
+//                 MaterialPageRoute(
+//                   builder: (context) => Recipe(widget.title),
+//                 ),
+//               );
+//             },
+//             child: AnimatedContainer(
+//               duration: const Duration(milliseconds: 200),
+//               decoration: BoxDecoration(
+//                 border: Border.all(
+//                   color: _isHovered ? Colors.blue : Colors.black,
+//                   width: 3.0,
+//                 ),
+//                 boxShadow: _isHovered
+//                     ? [
+//                         BoxShadow(
+//                           color: Colors.blue.withOpacity(0.5),
+//                           blurRadius: 10,
+//                           spreadRadius: 2,
+//                         )
+//                       ]
+//                     : [],
+//               ),
+//                child: Transform.scale(
+//                 scale: _isHovered ? 1.05 : 1.0,
+//               child: Image.network(
+//                 widget.img,
+//                 width: 300,
+//                 fit: BoxFit.cover,
+//               ),
+//                ),
+//             ),
+//           ),
+//         ),
+//       Padding(padding:  EdgeInsets.all(16),
+//       child:
+
+//       Text (widget.title, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,)),),
+     
+      
+      
+//       ],
+
+      
+
+//     );
+//   }
+// }

@@ -109,4 +109,36 @@ class _MyHomePageState extends State<MyHomePage> {
                 textStyle: const TextStyle(fontSize: 15), shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
                 ),), 
-      
+                onPressed: () => fetchMeals('Beef'),
+                child: const Text('Mains', style: TextStyle(color: Colors.white)),
+
+              ),
+              ),
+             SizedBox(
+                width: 90,
+                height: 40,
+                child: 
+                TextButton(
+                style: TextButton.styleFrom(
+                backgroundColor: selectedCategory == 'Dessert' ? Colors.red[700] : Colors.red, 
+                textStyle: const TextStyle(fontSize: 15), shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+                ),), 
+                onPressed: () => fetchMeals('Dessert'),
+                child: const Text('Desserts', style: TextStyle(color: Colors.white)),
+
+              ),
+              ),
+            ],
+          ),
+        ),
+        Expanded(
+          child: ListView(
+            children: meals,
+          ),
+        ),
+      ],
+    ),
+  );
+}
+}
